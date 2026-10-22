@@ -1,0 +1,16 @@
+# Secrets and local data — never upload these
+.env
+*.csv
+olist-data/
+
+# Python / Jupyter leftovers
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Windows
+Thumbs.db
+Desktop.ini
