@@ -6,7 +6,7 @@ I used the public [Olist Brazilian e-commerce](https://www.kaggle.com/datasets/o
 2. Which **states** and **product categories** are late the most?
 3. Do late orders get **worse review scores**?
 
-I loaded the CSVs into a local PostgreSQL database, wrote the analysis in SQL, and made the charts in a Python notebook.
+I loaded the CSVs into a local PostgreSQL database, wrote the analysis in SQL, and made the charts in Python.
 
 ## What I found
 
@@ -44,7 +44,7 @@ sql/01_late_orders.sql        overall late rate
 sql/02_late_by_state.sql      late rate by customer state + rank
 sql/03_late_by_category.sql   late rate by product category + rank
 sql/04_late_vs_reviews.sql    average stars for late vs on time
-notebooks/charts.ipynb        pandas + seaborn charts
+charts.py                     pandas + seaborn charts
 figures/                      pngs used in this README
 ```
 
@@ -57,6 +57,6 @@ You need PostgreSQL with the Olist CSVs loaded into a database named `olist` (ho
 1. Copy `.env.example` to `.env` and put your password in the URL.
 2. Install packages: `py -3 -m pip install -r requirements.txt`
 3. Open any file in `sql/` in pgAdmin and run it on the `olist` database.
-4. Or open `notebooks/charts.ipynb` and run all cells. It reads the SQL files and redraws the charts.
+4. Or run `py -3 charts.py`. It reads the SQL files and redraws the charts.
 
 I did **not** put the CSV files in this repo. Download them from Kaggle if you want to rebuild the database.

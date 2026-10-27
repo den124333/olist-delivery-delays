@@ -4,4 +4,3 @@ psycopg[binary]
 python-dotenv
 seaborn
 matplotlib
-jupyter
